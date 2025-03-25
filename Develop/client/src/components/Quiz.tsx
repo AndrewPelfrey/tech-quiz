@@ -1,4 +1,4 @@
-import { useState, } from 'react';
+import { useState } from 'react';
 import type { Question } from '../models/Question.js';
 import { getQuestions } from '../services/questionApi.js';
 
@@ -84,12 +84,16 @@ const Quiz = () => {
     <div className='card p-4'>
       <h2>{currentQuestion.question}</h2>
       <div className="mt-3">
-      {currentQuestion.answers.map((answer, index) => (
-        <div key={index} className="d-flex align-items-center mb-2">
-          <button className="btn btn-primary" onClick={() => handleAnswerClick(answer.isCorrect)}>{index + 1}</button>
-          <div className="alert alert-secondary mb-0 ms-2 flex-grow-1">{answer.text}</div>
-        </div>
-      ))}
+        {currentQuestion.answers.map((answer, index) => (
+          <div key={index} className="d-flex align-items-center mb-2">
+            <button
+              className="btn btn-primary"
+              onClick={() => handleAnswerClick(answer.isCorrect)} // Pass isCorrect directly
+            >
+              {answer.text} {/* Display the actual answer text */}
+            </button>
+          </div>
+        ))}
       </div>
     </div>
   );

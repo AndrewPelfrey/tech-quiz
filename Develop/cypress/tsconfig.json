@@ -1,0 +1,22 @@
+{
+    "compilerOptions": {
+      "target": "ES6",
+      "module": "ESNext",
+      "moduleResolution": "node",
+      "strict": true,
+      "esModuleInterop": true,
+      "skipLibCheck": true,
+      "forceConsistentCasingInFileNames": true,
+      "outDir": "./dist",
+      "jsx": "react-jsx"
+    },
+//     "include": [
+//   "src/**/*.ts",
+//   "src/**/*.tsx",
+//   "cypress/**/*.ts"
+// ],
+//     "exclude": [
+//       "node_modules"
+//     ]
+  }
+  
